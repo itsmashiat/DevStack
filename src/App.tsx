@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 const App = () => {
     return(
@@ -7,7 +8,10 @@ const App = () => {
             <Navbar />
 
             <main className="flex-1">
-                <div id="home" />
+                <Hero />
+                <div id="technologies" />
+                <div id="about" />
+                <div id="contact" />
             </main>
         </div>
     );
