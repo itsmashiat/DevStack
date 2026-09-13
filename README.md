@@ -1,3 +1,7 @@
+GitHub Repository Link : https://github.com/itsmashiat/DevStack.git
+Live Website Link : https://devstack-zeta.vercel.app/
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -73,3 +77,44 @@ export default defineConfig([
 ])
 
 ```
+
+
+1. What is JSX, and why is it used in React?
+
+=> 
+
+
+2. What is the difference between props and state?
+
+
+=> 
+
+
+3. What does the useState hook do, and where did you use it in this project?
+
+
+=> 
+
+
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+
+
+=> 
+
+
+5. Why does every item in a .map() list need a unique key prop?
+
+
+=> 
+
+
+6. What is conditional rendering? Show one place you used it (example: the empty stack message).
+
+
+=> 
+
+
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+
+=> 
