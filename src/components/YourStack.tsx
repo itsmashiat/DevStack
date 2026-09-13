@@ -20,11 +20,11 @@ const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
   return (
     <aside
       aria-label="Selected Technology Stack"
-      className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm lg:sticky lg:top-20"
+      className="bg-white border border-slate-100 rounded-2xl p-6 shadow-xs lg:sticky lg:top-24"
     >
       <div>
-        <h3 className="text-lg font-bold text-slate-900">Your Stack</h3>
-        <p className="text-xs text-slate-500 mt-1" aria-live="polite">
+        <h3 className="text-base font-bold text-slate-900">Your Stack</h3>
+        <p className="text-xs text-slate-400 mt-1" aria-live="polite">
           {isEmpty
             ? "No technologies selected yet."
             : `${stack.length} ${
@@ -36,9 +36,11 @@ const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
       {isEmpty ? (
         <div
           role="status"
-          className="border border-dashed border-slate-200 rounded-xl py-6 px-4 flex items-center justify-center mt-4"
+          className="border border-dashed border-slate-200/90 rounded-xl py-9 px-4 flex items-center justify-center mt-5"
         >
-          <span className="text-slate-400 text-xs">Your stack is empty.</span>
+          <span className="text-slate-400 text-xs font-normal">
+            Your stack is empty.
+          </span>
         </div>
       ) : (
         <div className="mt-5">
@@ -50,7 +52,7 @@ const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
               <div
                 key={item.id}
                 role="listitem"
-                className="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-white shadow-xs transition-all duration-200 ease-out hover:border-slate-300"
+                className="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-all duration-200 ease-out shadow-xs"
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <img
@@ -63,7 +65,7 @@ const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
                     <p className="text-xs font-bold text-slate-900 truncate">
                       {item.name}
                     </p>
-                    <span className="text-xs text-slate-400">
+                    <span className="text-[10px] text-slate-400 block leading-tight">
                       {item.category}
                     </span>
                   </div>
@@ -73,7 +75,7 @@ const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
                   type="button"
                   aria-label={`Remove ${item.name} from stack`}
                   onClick={() => handleItemRemove(item.id)}
-                  className="shrink-0 ml-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-lg text-sm p-1.5 leading-none transition-colors cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-red-500"
+                  className="shrink-0 ml-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-lg text-xs p-1 leading-none transition-colors cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-red-500"
                 >
                   ✕
                 </button>
@@ -85,7 +87,7 @@ const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
             type="button"
             onClick={handleClearAllClick}
             aria-label="Remove all technologies from stack"
-            className="w-full mt-5 py-2.5 rounded-xl border border-rose-200 text-red-600 hover:bg-rose-50 font-bold text-xs transition-colors cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-red-500"
+            className="w-full mt-4 py-2.5 rounded-xl border border-rose-200 bg-white text-[#E11D48] hover:bg-rose-50 font-medium text-xs transition-colors cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-red-500"
           >
             Remove All
           </button>

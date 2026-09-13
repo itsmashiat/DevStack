@@ -62,7 +62,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen text-slate-900 flex flex-col bg-[#fafafa]">
+    <div className="min-h-screen text-slate-900 flex flex-col bg-white">
       <Navbar />
 
       <main className="flex-1">
@@ -70,34 +70,28 @@ const App = () => {
 
         <section
           id="technologies"
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 scroll-mt-20 sm:scroll-mt-24"
+          className="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 scroll-mt-20 sm:scroll-mt-24"
         >
-          <div className="mb-6 sm:mb-8 text-center sm:text-left">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+          <div className="mb-8 sm:mb-10 text-left">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Explore the{" "}
               <span className="brand-gradient-text">Technologies</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+            <p className="text-xs sm:text-sm text-slate-400 mt-2">
               Pick one technology per category to build your ideal stack.
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
-            <div className="w-full lg:flex-1 min-w-0">
+          <div className="flex flex-col xl:flex-row gap-6 lg:gap-8 items-start">
+            <div className="w-full xl:flex-1 min-w-0">
               {loading ? (
-                <div>
-                  <div className="flex items-center gap-2.5 mb-5 px-3.5 py-2.5 bg-pink-50/70 border border-pink-100 rounded-xl text-pink-700 text-xs font-medium w-fit">
-                    <span className="loading loading-spinner loading-xs text-pink-600"></span>
-                    <span>Loading technologies...</span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                    {Array.from({ length: 6 }).map((_, index) => (
-                      <TechCardSkeleton key={index} />
-                    ))}
-                  </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <TechCardSkeleton key={index} />
+                  ))}
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                   {technologies.map((tech) => (
                     <TechCard
                       key={tech.id}
@@ -110,7 +104,7 @@ const App = () => {
               )}
             </div>
 
-            <div className="w-full lg:w-80 shrink-0">
+            <div className="w-full xl:w-72 2xl:w-80 shrink-0">
               <YourStack
                 stack={stack}
                 onRemove={handleRemove}

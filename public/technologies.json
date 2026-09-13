@@ -23,7 +23,7 @@
     "id": "svelte",
     "name": "Svelte",
     "category": "Frontend",
-    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero runtime overhead.",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
     "icon": "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Svelte.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
@@ -37,7 +37,7 @@
     "icon": "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/NextJS-Dark.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Fullstack"
+    "badge": ""
   },
   {
     "id": "nodejs",
